@@ -11,14 +11,14 @@ const Home = () => {
     { icon: Users, value: '500+', label: 'Membres Actifs' },
     { icon: Globe, value: '25+', label: 'Universités Partenaires' },
     { icon: Calendar, value: '50+', label: 'Événements par An' },
-    { icon: Award, value: '10+', label: 'Années d'Existence' },
+    { icon: Award, value: '10+', label: "Années d'Existence" },
   ]
 
   const values = [
     {
       icon: Heart,
       title: 'Solidarité',
-      description: 'Nous croyons en la force de la communauté et en l'entraide entre étudiants haïtiens au Mexique.'
+      description: "Nous croyons en la force de la communauté et en l'entraide entre étudiants haïtiens au Mexique."
     },
     {
       icon: BookOpen,

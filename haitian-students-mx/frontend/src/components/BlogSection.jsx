@@ -35,7 +35,7 @@ const BlogSection = () => {
       setPosts([
         {
           _id: '1',
-          title: 'Mon Premier Semestre à Mexico: Ce que J'ai Appris',
+          title: "Mon Premier Semestre à Mexico: Ce que J'ai Appris",
           excerpt: 'Arriver dans un nouveau pays peut être intimidant. Voici mon parcours et mes conseils pour les nouveaux étudiants haïtiens au Mexique.',
           author: 'Marie-Claire Joseph',
           category: 'story',
