@@ -5,63 +5,24 @@ const BlobHero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Blob 1 - Haiti Blue */}
         <motion.div
-          animate={{
-            x: [0, 100, 50, 0],
-            y: [0, -50, 100, 0],
-            scale: [1, 1.2, 0.9, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ x: [0, 100, 50, 0], y: [0, -50, 100, 0], scale: [1, 1.2, 0.9, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-0 left-0 w-[600px] h-[600px] bg-haiti-blue/30 rounded-full blur-[120px]"
         />
-
-        {/* Blob 2 - Haiti Red */}
         <motion.div
-          animate={{
-            x: [0, -80, 60, 0],
-            y: [0, 100, -40, 0],
-            scale: [1, 0.8, 1.1, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ x: [0, -80, 60, 0], y: [0, 100, -40, 0], scale: [1, 0.8, 1.1, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-haiti-red/25 rounded-full blur-[100px]"
         />
-
-        {/* Blob 3 - Mexico Green */}
         <motion.div
-          animate={{
-            x: [0, 70, -30, 0],
-            y: [0, -80, 60, 0],
-            scale: [1, 1.1, 0.9, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ x: [0, 70, -30, 0], y: [0, -80, 60, 0], scale: [1, 1.1, 0.9, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-mexico-green/20 rounded-full blur-[90px]"
         />
-
-        {/* Blob 4 - Warm accent */}
         <motion.div
-          animate={{
-            x: [0, -50, 80, 0],
-            y: [0, 60, -100, 0],
-            scale: [1, 0.9, 1.2, 1],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ x: [0, -50, 80, 0], y: [0, 60, -100, 0], scale: [1, 0.9, 1.2, 1] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 right-20 w-[350px] h-[350px] bg-amber-500/15 rounded-full blur-[80px]"
         />
       </div>
@@ -105,7 +66,7 @@ const BlobHero = () => {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <span className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/80 text-sm font-medium mb-6 border border-white/20">
-            🇭🇹 Haïti · 🇲🇽 Mexique
+            🇭🇹 Haiti · 🇲🇽 Mexico
           </span>
         </motion.div>
 
@@ -115,11 +76,11 @@ const BlobHero = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
         >
-          Association des{' '}
+          Association of{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-400">
-            Étudiants Haïtiens
+            Haitian Students
           </span>{' '}
-          au Mexique
+          in Mexico
         </motion.h1>
 
         <motion.p
@@ -128,7 +89,7 @@ const BlobHero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Unissant nos voix, célébrant notre culture et construisant notre avenir ensemble au cœur du Mexique.
+          Uniting our voices, celebrating our culture, and building our future together in the heart of Mexico.
         </motion.p>
 
         <motion.div
@@ -141,13 +102,13 @@ const BlobHero = () => {
             href="#gallery"
             className="px-8 py-4 bg-white text-slate-900 rounded-full font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
           >
-            Découvrir Notre Galerie
+            Explore Our Gallery
           </a>
           <a
             href="#about"
             className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/30 hover:bg-white/20 transition-all"
           >
-            En Savoir Plus
+            Learn More
           </a>
         </motion.div>
       </div>

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [lang, setLang] = useState('fr')
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -14,17 +13,11 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { href: '#home', label: { fr: 'Accueil', es: 'Inicio', ht: 'Akèy' } },
-    { href: '#about', label: { fr: 'À Propos', es: 'Nosotros', ht: 'Kiyès Nou Ye' } },
-    { href: '#gallery', label: { fr: 'Galerie', es: 'Galería', ht: 'Galeri' } },
-    { href: '#blog', label: { fr: 'Blog', es: 'Blog', ht: 'Blog' } },
-    { href: '#contact', label: { fr: 'Contact', es: 'Contacto', ht: 'Kontak' } },
-  ]
-
-  const languages = [
-    { code: 'fr', label: 'FR' },
-    { code: 'es', label: 'ES' },
-    { code: 'ht', label: 'HT' },
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#contact', label: 'Contact' },
   ]
 
   return (
@@ -53,27 +46,9 @@ const Navbar = () => {
                   scrolled ? 'text-slate-600' : 'text-white/90'
                 }`}
               >
-                {link.label[lang]}
+                {link.label}
               </a>
             ))}
-
-            {/* Language Switcher */}
-            <div className="flex items-center gap-1 ml-4">
-              <Globe className={`w-4 h-4 ${scrolled ? 'text-slate-600' : 'text-white'}`} />
-              {languages.map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => setLang(l.code)}
-                  className={`px-2 py-1 text-xs font-semibold rounded transition-colors ${
-                    lang === l.code
-                      ? 'bg-haiti-blue text-white'
-                      : scrolled ? 'text-slate-600 hover:bg-slate-100' : 'text-white/80 hover:bg-white/20'
-                  }`}
-                >
-                  {l.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,22 +82,9 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className="block text-slate-700 hover:text-haiti-red font-medium py-2"
                 >
-                  {link.label[lang]}
+                  {link.label}
                 </a>
               ))}
-              <div className="flex gap-2 pt-2 border-t">
-                {languages.map((l) => (
-                  <button
-                    key={l.code}
-                    onClick={() => setLang(l.code)}
-                    className={`px-3 py-1 text-xs font-semibold rounded ${
-                      lang === l.code ? 'bg-haiti-blue text-white' : 'bg-slate-100 text-slate-600'
-                    }`}
-                  >
-                    {l.label}
-                  </button>
-                ))}
-              </div>
             </div>
           </motion.div>
         )}

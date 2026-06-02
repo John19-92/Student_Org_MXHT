@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="font-bold text-xl">AEHM</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Association des Étudiants Haïtiens au Mexique. Unissant nos voix, célébrant notre culture et construisant notre avenir.
+              Association of Haitian Students in Mexico. Uniting our voices, celebrating our culture, and building our future together.
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-haiti-blue transition-colors">
@@ -33,24 +33,24 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Liens Rapides</h4>
+            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-slate-400 hover:text-white transition-colors text-sm">Accueil</a></li>
-              <li><a href="#about" className="text-slate-400 hover:text-white transition-colors text-sm">À Propos</a></li>
-              <li><a href="#gallery" className="text-slate-400 hover:text-white transition-colors text-sm">Galerie</a></li>
+              <li><a href="#home" className="text-slate-400 hover:text-white transition-colors text-sm">Home</a></li>
+              <li><a href="#about" className="text-slate-400 hover:text-white transition-colors text-sm">About</a></li>
+              <li><a href="#gallery" className="text-slate-400 hover:text-white transition-colors text-sm">Gallery</a></li>
               <li><a href="#blog" className="text-slate-400 hover:text-white transition-colors text-sm">Blog</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Devenir Membre</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Become a Member</a></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Ressources</h4>
+            <h4 className="font-semibold text-lg mb-6">Resources</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Guide du Nouveau Venu</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Bourses d'Études</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Logement Étudiant</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Santé & Assurance</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">New Student Guide</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Scholarships</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Student Housing</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Health & Insurance</a></li>
               <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">FAQ</a></li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-haiti-red shrink-0 mt-0.5" />
-                <span className="text-slate-400 text-sm">Mexico City, Mexique</span>
+                <span className="text-slate-400 text-sm">Mexico City, Mexico</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-haiti-red shrink-0" />
@@ -82,10 +82,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {currentYear} Association des Étudiants Haïtiens au Mexique. Tous droits réservés.
+            © {currentYear} Association of Haitian Students in Mexico. All rights reserved.
           </p>
           <p className="text-slate-500 text-sm flex items-center gap-1">
-            Fait avec <Heart className="w-4 h-4 text-haiti-red fill-haiti-red" /> pour la communauté
+            Made with <Heart className="w-4 h-4 text-haiti-red fill-haiti-red" /> for the community
           </p>
         </div>
       </div>

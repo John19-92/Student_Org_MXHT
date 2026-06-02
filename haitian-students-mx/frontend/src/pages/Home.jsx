@@ -8,27 +8,27 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   const stats = [
-    { icon: Users, value: '500+', label: 'Membres Actifs' },
-    { icon: Globe, value: '25+', label: 'Universités Partenaires' },
-    { icon: Calendar, value: '50+', label: 'Événements par An' },
-    { icon: Award, value: '10+', label: "Années d'Existence" },
+    { icon: Users, value: '500+', label: 'Active Members' },
+    { icon: Globe, value: '25+', label: 'Partner Universities' },
+    { icon: Calendar, value: '50+', label: 'Events per Year' },
+    { icon: Award, value: '10+', label: 'Years of Existence' },
   ]
 
   const values = [
     {
       icon: Heart,
-      title: 'Solidarité',
-      description: "Nous croyons en la force de la communauté et en l'entraide entre étudiants haïtiens au Mexique."
+      title: 'Solidarity',
+      description: 'We believe in the strength of community and mutual support among Haitian students in Mexico.'
     },
     {
       icon: BookOpen,
-      title: 'Excellence Académique',
-      description: 'Promouvoir la réussite académique et professionnelle de nos membres dans toutes les disciplines.'
+      title: 'Academic Excellence',
+      description: 'Promoting the academic and professional success of our members across all disciplines.'
     },
     {
       icon: Globe,
-      title: 'Échange Culturel',
-      description: 'Créer des ponts entre la culture haïtienne et la culture mexicaine à travers des événements et partenariats.'
+      title: 'Cultural Exchange',
+      description: 'Building bridges between Haitian and Mexican culture through events and partnerships.'
     },
   ]
 
@@ -48,28 +48,28 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-haiti-red font-semibold text-sm tracking-wider uppercase">Qui Sommes-Nous</span>
+              <span className="text-haiti-red font-semibold text-sm tracking-wider uppercase">Who We Are</span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">
-                Une Communauté,{' '}
-                <span className="text-haiti-blue">Une Famille</span>
+                One Community,{' '}
+                <span className="text-haiti-blue">One Family</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                L'Association des Étudiants Haïtiens au Mexique (AEHM) est une organisation à but non lucratif 
-                fondée pour accompagner, soutenir et représenter les étudiants haïtiens dans leur parcours 
-                académique au Mexique.
+                The Association of Haitian Students in Mexico (AEHM) is a non-profit organization
+                founded to support, accompany, and represent Haitian students throughout their
+                academic journey in Mexico.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                De Mexico City à Guadalajara, en passant par Monterrey et Puebla, nous créons un réseau 
-                solide qui permet à chaque étudiant de trouver sa place, de réussir ses études et de 
-                préserver son héritage culturel loin de son pays natal.
+                From Mexico City to Guadalajara, through Monterrey and Puebla, we build a strong
+                network that helps every student find their place, succeed in their studies, and
+                preserve their cultural heritage far from home.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <a href="#gallery" className="px-6 py-3 bg-haiti-blue text-white rounded-full font-semibold hover:bg-haiti-blue/90 transition-colors">
-                  Voir Nos Activités
+                  See Our Activities
                 </a>
                 <a href="#contact" className="px-6 py-3 border-2 border-slate-200 text-slate-700 rounded-full font-semibold hover:border-haiti-blue hover:text-haiti-blue transition-colors">
-                  Nous Contacter
+                  Contact Us
                 </a>
               </div>
             </motion.div>
@@ -83,32 +83,32 @@ const Home = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4 mt-8">
                   <div className="rounded-2xl overflow-hidden h-48">
-                    <img 
-                      src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600" 
-                      alt="Students" 
+                    <img
+                      src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600"
+                      alt="Students"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden h-64">
-                    <img 
-                      src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600" 
-                      alt="Event" 
+                    <img
+                      src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
+                      alt="Event"
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden h-64">
-                    <img 
-                      src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600" 
-                      alt="Culture" 
+                    <img
+                      src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600"
+                      alt="Culture"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden h-48">
-                    <img 
-                      src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600" 
-                      alt="Community" 
+                    <img
+                      src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600"
+                      alt="Community"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -125,8 +125,8 @@ const Home = () => {
                   🇭🇹
                 </div>
                 <div>
-                  <p className="font-bold text-slate-900">Depuis 2014</p>
-                  <p className="text-sm text-slate-500">10 ans d'engagement</p>
+                  <p className="font-bold text-slate-900">Since 2014</p>
+                  <p className="text-sm text-slate-500">10 years of commitment</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -165,9 +165,9 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-haiti-blue font-semibold text-sm tracking-wider uppercase">Nos Valeurs</span>
+            <span className="text-haiti-blue font-semibold text-sm tracking-wider uppercase">Our Values</span>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-3">
-              Ce qui nous Anime
+              What Drives Us
             </h2>
           </motion.div>
 
@@ -210,18 +210,18 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Rejoignez Notre Communauté
+              Join Our Community
             </h2>
             <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-              Que vous soyez étudiant haïtien au Mexique ou que vous souhaitiez nous soutenir, 
-              il y a une place pour vous dans notre famille.
+              Whether you are a Haitian student in Mexico or simply want to support us,
+              there is a place for you in our family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#" className="px-8 py-4 bg-white text-slate-900 rounded-full font-semibold hover:bg-white/90 transition-colors shadow-lg">
-                Devenir Membre
+                Become a Member
               </a>
               <a href="#" className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/30 hover:bg-white/20 transition-colors">
-                Soutenir l'Association
+                Support the Association
               </a>
             </div>
           </motion.div>

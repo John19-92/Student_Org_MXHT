@@ -14,11 +14,11 @@ const MediaGallery = () => {
   const [loading, setLoading] = useState(true)
 
   const categories = [
-    { id: 'all', label: 'Tout' },
-    { id: 'events', label: 'Événements' },
+    { id: 'all', label: 'All' },
+    { id: 'events', label: 'Events' },
     { id: 'culture', label: 'Culture' },
-    { id: 'academic', label: 'Académique' },
-    { id: 'daily_life', label: 'Vie Quotidienne' },
+    { id: 'academic', label: 'Academic' },
+    { id: 'daily_life', label: 'Daily Life' },
   ]
 
   useEffect(() => {
@@ -33,14 +33,13 @@ const MediaGallery = () => {
       setMedia(res.data.data || [])
     } catch (err) {
       console.error('Error fetching media:', err)
-      // Fallback demo data
       setMedia([
-        { _id: '1', title: 'Fête de l'Indépendance', type: 'image', path: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?w=800', category: 'events' },
-        { _id: '2', title: 'Carnaval Haïtien', type: 'video', path: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800', category: 'culture' },
-        { _id: '3', title: 'Conférence Universitaire', type: 'image', path: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800', category: 'academic' },
-        { _id: '4', title: 'Rencontre au Parc', type: 'image', path: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800', category: 'daily_life' },
-        { _id: '5', title: 'Soirée Culturelle', type: 'video', path: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800', category: 'events' },
-        { _id: '6', title: 'Gastronomie Haïtienne', type: 'image', path: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800', category: 'culture' },
+        { _id: '1', title: 'Independence Day Celebration', type: 'image', path: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?w=800', category: 'events' },
+        { _id: '2', title: 'Haitian Carnival', type: 'video', path: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800', category: 'culture' },
+        { _id: '3', title: 'University Conference', type: 'image', path: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800', category: 'academic' },
+        { _id: '4', title: 'Park Meetup', type: 'image', path: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800', category: 'daily_life' },
+        { _id: '5', title: 'Cultural Evening', type: 'video', path: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800', category: 'events' },
+        { _id: '6', title: 'Haitian Cuisine', type: 'image', path: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800', category: 'culture' },
       ])
     } finally {
       setLoading(false)
@@ -66,7 +65,6 @@ const MediaGallery = () => {
     setSelectedItem(filteredMedia[newIndex])
   }, [currentIndex, filteredMedia])
 
-  // Keyboard navigation for lightbox
   useEffect(() => {
     if (!selectedItem) return
     const handleKeyDown = (e) => {
@@ -81,19 +79,18 @@ const MediaGallery = () => {
   return (
     <section id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-haiti-red font-semibold text-sm tracking-wider uppercase">Mémoires & Moments</span>
+          <span className="text-haiti-red font-semibold text-sm tracking-wider uppercase">Memories & Moments</span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-4">
-            Notre Galerie
+            Our Gallery
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Découvrez nos événements, notre culture et nos moments de vie à travers photos et vidéos.
+            Discover our events, culture, and everyday moments through photos and videos.
           </p>
         </motion.div>
 
@@ -115,16 +112,12 @@ const MediaGallery = () => {
           ))}
         </div>
 
-        {/* Gallery Grid */}
         {loading ? (
           <div className="flex justify-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-haiti-blue" />
           </div>
         ) : (
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
               {filteredMedia.map((item, index) => (
                 <motion.div
@@ -142,8 +135,6 @@ const MediaGallery = () => {
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <div className="flex items-center gap-2 mb-2">
@@ -157,7 +148,7 @@ const MediaGallery = () => {
                           </div>
                         )}
                         <span className="text-white/80 text-xs font-medium uppercase tracking-wider">
-                          {item.type === 'video' ? 'Vidéo' : 'Photo'}
+                          {item.type === 'video' ? 'Video' : 'Photo'}
                         </span>
                       </div>
                       <h3 className="text-white font-semibold text-lg">{item.title}</h3>
@@ -169,16 +160,15 @@ const MediaGallery = () => {
           </motion.div>
         )}
 
-        {/* Empty State */}
         {!loading && filteredMedia.length === 0 && (
           <div className="text-center py-20">
             <ImageIcon className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-            <p className="text-slate-500 text-lg">Aucun média dans cette catégorie pour le moment.</p>
+            <p className="text-slate-500 text-lg">No media in this category yet.</p>
           </div>
         )}
       </div>
 
-      {/* Lightbox / Modal */}
+      {/* Lightbox */}
       <AnimatePresence>
         {selectedItem && (
           <motion.div
@@ -188,15 +178,12 @@ const MediaGallery = () => {
             className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
             onClick={closeLightbox}
           >
-            {/* Close Button */}
             <button
               className="absolute top-6 right-6 z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               onClick={closeLightbox}
             >
               <X className="w-6 h-6" />
             </button>
-
-            {/* Navigation */}
             <button
               className="absolute left-4 md:left-8 z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               onClick={(e) => { e.stopPropagation(); navigate('prev') }}
@@ -209,13 +196,9 @@ const MediaGallery = () => {
             >
               <ChevronRight className="w-6 h-6" />
             </button>
-
-            {/* Counter */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/70 text-sm">
               {currentIndex + 1} / {filteredMedia.length}
             </div>
-
-            {/* Content */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

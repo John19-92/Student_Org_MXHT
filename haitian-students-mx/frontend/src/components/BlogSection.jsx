@@ -11,12 +11,12 @@ const BlogSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const categories = [
-    { id: 'all', label: 'Tous' },
-    { id: 'news', label: 'Actualités' },
-    { id: 'story', label: 'Témoignages' },
+    { id: 'all', label: 'All' },
+    { id: 'news', label: 'News' },
+    { id: 'story', label: 'Stories' },
     { id: 'guide', label: 'Guides' },
     { id: 'culture', label: 'Culture' },
-    { id: 'academic', label: 'Académique' },
+    { id: 'academic', label: 'Academic' },
   ]
 
   useEffect(() => {
@@ -31,45 +31,44 @@ const BlogSection = () => {
       setPosts(res.data.data || [])
     } catch (err) {
       console.error('Error fetching posts:', err)
-      // Fallback demo data
       setPosts([
         {
           _id: '1',
-          title: "Mon Premier Semestre à Mexico: Ce que J'ai Appris",
-          excerpt: 'Arriver dans un nouveau pays peut être intimidant. Voici mon parcours et mes conseils pour les nouveaux étudiants haïtiens au Mexique.',
+          title: 'My First Semester in Mexico City: What I Learned',
+          excerpt: 'Moving to a new country can be overwhelming. Here is my journey and tips for new Haitian students arriving in Mexico.',
           author: 'Marie-Claire Joseph',
           category: 'story',
-          language: 'french',
+          language: 'english',
           createdAt: '2024-01-15T10:00:00Z',
           image: 'https://images.unsplash.com/photo-1518182170546-0766bc6f9213?w=800'
         },
         {
           _id: '2',
-          title: 'Guide Complet: Comment Obtenir votre Visa Étudiant',
-          excerpt: 'Un guide étape par étape pour naviguer dans le processus de visa étudiant mexicain sans stress.',
+          title: 'Complete Guide: How to Get Your Student Visa',
+          excerpt: 'A step-by-step guide to navigating the Mexican student visa process without the stress.',
           author: 'Jean-Pierre Louis',
           category: 'guide',
-          language: 'french',
+          language: 'english',
           createdAt: '2024-02-01T14:30:00Z',
           image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800'
         },
         {
           _id: '3',
-          title: 'Célébration de la Fête du Drapeau Haïtien au Mexique',
-          excerpt: 'Retour en images et vidéos sur notre célébration annuelle qui a réuni plus de 200 étudiants à Mexico.',
-          author: 'Association AEHM',
+          title: 'Celebrating Haitian Flag Day in Mexico',
+          excerpt: 'A look back at our annual celebration that brought together over 200 students in Mexico City.',
+          author: 'AEHM Association',
           category: 'news',
-          language: 'french',
+          language: 'english',
           createdAt: '2024-05-18T09:00:00Z',
           image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800'
         },
         {
           _id: '4',
-          title: 'La Cuisine Haïtienne au Mexique: Où Trouver les Ingrédients',
-          excerpt: 'Guide pratique des marchés et épiceries mexicaines où vous pouvez trouver les ingrédients essentiels de la cuisine haïtienne.',
+          title: 'Haitian Cuisine in Mexico: Where to Find the Ingredients',
+          excerpt: 'A practical guide to markets and grocery stores in Mexico where you can find essential Haitian cooking ingredients.',
           author: 'Sophie Durand',
           category: 'culture',
-          language: 'french',
+          language: 'english',
           createdAt: '2024-03-10T11:00:00Z',
           image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800'
         },
@@ -80,7 +79,7 @@ const BlogSection = () => {
   }
 
   const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('fr-FR', {
+    return new Date(dateString).toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
@@ -100,11 +99,11 @@ const BlogSection = () => {
 
   const getCategoryLabel = (cat) => {
     const labels = {
-      news: 'Actualités',
-      story: 'Témoignage',
+      news: 'News',
+      story: 'Story',
       guide: 'Guide',
       culture: 'Culture',
-      academic: 'Académique',
+      academic: 'Academic',
     }
     return labels[cat] || cat
   }
@@ -112,19 +111,18 @@ const BlogSection = () => {
   return (
     <section id="blog" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-haiti-blue font-semibold text-sm tracking-wider uppercase">Nos Histoires</span>
+          <span className="text-haiti-blue font-semibold text-sm tracking-wider uppercase">Our Stories</span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-4">
-            Blog & Actualités
+            Blog & News
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Découvrez les témoignages, guides et nouvelles de notre communauté d'étudiants haïtiens au Mexique.
+            Discover stories, guides, and news from our community of Haitian students in Mexico.
           </p>
         </motion.div>
 
@@ -146,7 +144,6 @@ const BlogSection = () => {
           ))}
         </div>
 
-        {/* Blog Grid */}
         {loading ? (
           <div className="flex justify-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-haiti-blue" />
@@ -196,7 +193,7 @@ const BlogSection = () => {
                   </p>
 
                   <button className="inline-flex items-center gap-2 text-haiti-red font-semibold text-sm hover:gap-3 transition-all">
-                    Lire la suite
+                    Read more
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -205,11 +202,10 @@ const BlogSection = () => {
           </div>
         )}
 
-        {/* Empty State */}
         {!loading && posts.length === 0 && (
           <div className="text-center py-20">
             <BookOpen className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-            <p className="text-slate-500 text-lg">Aucun article dans cette catégorie pour le moment.</p>
+            <p className="text-slate-500 text-lg">No articles in this category yet.</p>
           </div>
         )}
       </div>
